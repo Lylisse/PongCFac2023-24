@@ -14,8 +14,9 @@ void printPotPos(tuple PotPos){
 }
 
 bool isPotChange(tuple PotPos){
-  if( abs(PrevPotPos1 - PotPos.a) > 5 || abs(PrevPotPos2 - PotPos.b) > 5){
+  if(abs(PrevPotPos1 - PotPos.a) > 5 || abs(PrevPotPos2 - PotPos.b) > 5){
     PrevPotPos1 = PotPos.a;
+    PrevPotPos2 = PotPos.b;
     return true;
   }
   else{
@@ -24,8 +25,20 @@ bool isPotChange(tuple PotPos){
 }
 
 void sendSerialPotPos(tuple PotPos){
-  byte SerSendArr[2] = {PotPos.a, PotPos.b}; /*TODO transform ints to byte to send with serial*/
+  /*byte SerSendArr;
+  SerSendArr = PotPos.a & 0xFF;
+  Serial.write(PotPos.a & 0xFF);
+  SerSendArr[1] = (PotPos.a >> 8) & 0xFF;
+  SerSendArr[2] = PotPos.b & 0xFF;
+  SerSendArr[3] = (PotPos.b >> 8) & 0xFF;
+  SerSendArr[0] = (byte) PotPos.a;
   Serial.write(SerSendArr, sizeof(SerSendArr));
+  Serial.write((PotPos.a >> 8) & 0xFF);
+  Serial.write(PotPos.a & 0xFF);*/
+  Serial.print("r");
+  Serial.print(PotPos.a);
+  Serial.print("l");
+  Serial.print(PotPos.b); /*TODO Protocole d'envoi*/
 }
 
 tuple getPotPos(){
@@ -37,6 +50,10 @@ tuple getPotPos(){
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(250000);
+  Serial.print("r");
+  Serial.print(0);
+  Serial.print("l");
+  Serial.print(0); 
 }
 
 void loop() {
