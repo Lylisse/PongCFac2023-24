@@ -8,7 +8,7 @@ Ci-dessous des liens utiles vers des informations essentielles:
 
 Potentiomètres à acheter: [Lien](https://www.digitec.ch/fr/s1/product/monacor-potentiometre-bouton-interrupteur-17521651)
 
-Librairie Serial Arduino: [Lien](https://github.com/PowerBroker2/SerialTransfer/tree/master?tab=readme-ov-file)
+Vidéo lecture COM port: [Lien]([https://github.com/PowerBroker2/SerialTransfer/tree/master?tab=readme-ov-file](https://www.youtube.com/watch?v=bLz33O6-i5Q))
 
 Infos sur la programmation côté Device: [Lien](https://www.electronicdesign.com/technologies/industrial/boards/article/21801151/how-to-create-and-program-usb-devices)
 
