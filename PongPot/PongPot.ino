@@ -31,7 +31,6 @@ void sendSerialPotPos(tuple PotPos){
   SerSendArr[2] = PotPos.b & 0xFF;
   SerSendArr[3] = (PotPos.b >> 8) & 0xFF;
   Serial.write(SerSendArr, sizeof(SerSendArr));
-/*TODO Protocole d'envoi*/
 }
 
 tuple getPotPos(){
